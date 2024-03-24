@@ -22,7 +22,8 @@ class ClientBloc {
 
   ClientBloc() {                   //METODO LISTEN PASSA UM FUNCAO ANOMINA
     _imputClientController.stream.listen(_mapEventToState);
-  }                 //RECEBE UM CLIENTEVENT DE NOME event
+  }
+                   //RECEBE UM CLIENTEVENT DE NOME event
   _mapEventToState(ClientEvent event) {
     List<Client>? clients = []; //declara uma lista vazia
     if (event is LoadClientEvent) {

@@ -68,6 +68,7 @@ class _ClientPageState extends State<ClientPage> {
                   trailing: IconButton(
                     icon: Icon(Icons.remove),
                     onPressed: () {
+                      //ta indo no ClientEvent -> no Sink entrada -> chamando o RemoveClientEvent
                       bloc.imputClient
                           .add(RemoveClientEvent(client: clientsList[index]));
                     },
